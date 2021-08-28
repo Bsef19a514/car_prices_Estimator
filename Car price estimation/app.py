@@ -1,9 +1,9 @@
 from flask import Flask, request, render_template
-from flask_cors import CORS, cross_origin
+#from flask_cors import CORS, cross_origin
 import util
 
 app = Flask(__name__)
-cors = CORS(app)
+#cors = CORS(app)
 
 
 @app.route('/')
@@ -22,7 +22,7 @@ def index():
 
 
 @app.route('/predict', methods=['POST'])
-@cross_origin()
+#@cross_origin()
 def predict():
     car_models = request.form.get('car_models')
     fuel_types = request.form.get('fuel_types')
